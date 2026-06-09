@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Myrianthousis Architects</title>
     <script src="./js/tabs.js" defer></script> <!--reference the js code-->
+    <script src="./js/projectTabs.js" defer></script>
 </head>
 <body>
 
@@ -32,6 +33,29 @@
     <!--content for projects tab-->
     <div role="tabpanel" id="panel-projects" aria-labelledby="projects-button">
         <p>This is text for PROJECTS content.</p>
+        <div class="project-tabs" role="project-tablist" aria-label="Project tabs">
+            <button role="project-tab" id="project-all-button" aria-selected="true" aria-controls="panel-all-projects">ALL</button>
+            <button role="project-tab" id="project-residential-button" aria-selected="false" aria-controls="panel-residential-projects">RESIDENTIAL</button>
+            <button role="project-tab" id="project-commercial-button" aria-selected="false" aria-controls="panel-commercial-projects">COMMERCIAL</button>
+            <button role="project-tab" id="project-interior-button" aria-selected="false" aria-controls="panel-interior-projects">INTERIOR</button>
+        </div>
+
+        <div role="project-tabpanel" id="panel-all-projects" aria-labelledby="project-all-button">
+            <p>all projects go here...</p>
+        </div>
+
+         <div role="project-tabpanel" id="panel-residential-projects" aria-labelledby="project-residential-button">
+            <p>residential projects go here...</p>
+        </div>
+
+         <div role="project-tabpanel" id="panel-commercial-projects" aria-labelledby="project-commercial-button">
+            <p>commercial projects go here...</p>
+        </div>
+
+         <div role="project-tabpanel" id="panel-interior-projects" aria-labelledby="project-interior-button">
+            <p>interior projects go here...</p>
+        </div>
+
     </div>
 
     <!--content for info tab-->
