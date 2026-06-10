@@ -4,45 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Myrianthousis Architects</title>
+    <link rel="stylesheet" href="./css/button-styles.css">
+    <link rel="stylesheet" href="./css/image-styles.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/tab_styles.css">
     <script src="./js/tabs.js" defer></script> <!--reference the js code-->
     <script src="./js/projectTabs.js" defer></script>
 </head>
 <body>
 
-    <h1>Myrianthousis Architects</h1>
+    <!-- <h1>Myrianthousis Architects</h1> -->
 
     <!--tab panel-->
     <div class="tabs" role="tablist" aria-label="Profile tabs">
         <img src="./images/logo/L_BLACK.png" alt="company logo" width="300px">
-        <button role="tab" id="home-button" aria-selected="true" aria-controls="panel-home">home</button>
-        <button role="tab" id="projects-button" aria-selected="false" aria-controls="panel-projects">projects</button>
-        <button role="tab" id="info-button" aria-selected="false" aria-controls="panel-info">info</button>
+        <div class="tab-button-div">
+            <button role="tab" id="home-button" aria-selected="true" aria-controls="panel-home" class="tab-button">home</button>
+            <button role="tab" id="projects-button" aria-selected="false" aria-controls="panel-projects" class="tab-button">projects</button>
+            <button role="tab" id="info-button" aria-selected="false" aria-controls="panel-info" class="tab-button">info</button>
+        </div>
     </div>
 
     <!--content for home tab-->
     <div role="tabpanel" id="panel-home" aria-labelledby="home-button">
-        <p>This is text for HOME content.</p>
+        <!-- <p>This is text for HOME content.</p> -->
 
         <div class="images-display">
-            <img src="./images/commercial/sample_building_002.jpg" alt="picture of a house project" width="800px">
-            <img src="./images/residential/renders_maquette_001.jpg" alt="picture of a house project" width="800px">
-            <img src="./images/interior/interior_001.jpg" alt="picture of a house project" width="800px">
+            <img src="./images/commercial/sample_building_002.jpg" alt="picture of a house project" width="800px" class="home-picture">
+            <img src="./images/residential/renders_maquette_001.jpg" alt="picture of a house project" width="800px" class="home-picture">
+            <img src="./images/interior/interior_001.jpg" alt="picture of a house project" width="800px" class="home-picture">
         </div>
     </div>
 
     <!--content for projects tab-->
     <div role="tabpanel" id="panel-projects" aria-labelledby="projects-button">
-        <p>This is text for PROJECTS content.</p>
+        <!-- <p>This is text for PROJECTS content.</p> -->
         <div class="project-tabs" role="project-tablist" aria-label="Project tabs">
-            <button role="project-tab" id="project-all-button" aria-selected="true" aria-controls="panel-all-projects">ALL</button>
-            <button role="project-tab" id="project-residential-button" aria-selected="false" aria-controls="panel-residential-projects">RESIDENTIAL</button>
-            <button role="project-tab" id="project-commercial-button" aria-selected="false" aria-controls="panel-commercial-projects">COMMERCIAL</button>
-            <button role="project-tab" id="project-interior-button" aria-selected="false" aria-controls="panel-interior-projects">INTERIOR</button>
+            <button role="project-tab" id="project-all-button" aria-selected="true" aria-controls="panel-all-projects" class="project-button tab-button">ALL</button>
+            <button role="project-tab" id="project-residential-button" aria-selected="false" aria-controls="panel-residential-projects" class="project-button tab-button">RESIDENTIAL</button>
+            <button role="project-tab" id="project-commercial-button" aria-selected="false" aria-controls="panel-commercial-projects" class="project-button tab-button">COMMERCIAL</button>
+            <button role="project-tab" id="project-interior-button" aria-selected="false" aria-controls="panel-interior-projects" class="project-button tab-button">INTERIOR</button>
         </div>
 
         <!--ALL TAB-->
         <div role="project-tabpanel" id="panel-all-projects" aria-labelledby="project-all-button">
-            <p>all projects go here...</p>
+            <!-- <p>all projects go here...</p> -->
 
             <div>
                 <img src="./images/commercial/sample_building_002.jpg" alt="picture of project" width="600px">
@@ -58,7 +64,7 @@
 
         <!--RESIDENTIAL TAB-->
          <div role="project-tabpanel" id="panel-residential-projects" aria-labelledby="project-residential-button">
-            <p>residential projects go here...</p>
+            <!-- <p>residential projects go here...</p> -->
 
             <div>
                 <img src="./images/residential/renders_maquette_001.jpg" alt="picture of project" width="600px">
@@ -70,7 +76,7 @@
 
         <!--COMMERCIAL TAB-->
          <div role="project-tabpanel" id="panel-commercial-projects" aria-labelledby="project-commercial-button">
-            <p>commercial projects go here...</p>
+            <!-- <p>commercial projects go here...</p> -->
 
             <div>
                 <img src="./images/commercial/sample_building_002.jpg" alt="picture of project" width="600px">
@@ -79,7 +85,7 @@
 
         <!--INTERIOR TAB-->
          <div role="project-tabpanel" id="panel-interior-projects" aria-labelledby="project-interior-button">
-            <p>interior projects go here...</p>
+            <!-- <p>interior projects go here...</p> -->
 
             <div>
                 <img src="./images/interior/interior_001.jpg" alt="picture of project" width="600px">
@@ -92,7 +98,7 @@
 
     <!--content for info tab-->
     <div role="tabpanel" id="panel-info" aria-labelledby="info-button">
-        <p>This is text for INFO content.</p>
+        <!-- <p>This is text for INFO content.</p> -->
 
         <h2>About</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis temporibus saepe officiis enim nisi quos dolores tenetur fugiat placeat quibusdam dolore in quisquam labore nemo maxime quia, quidem rerum illo!</p>
@@ -103,7 +109,7 @@
     </div>
 
     <div class="footer">
-        <h2>Contact Information</h2>
+        <h2 id="footer-header">Contact Information</h2>
         <ul>
             <li>email:example@myrianthousis.com</li>
             <li>phone:+35799000000</li>
