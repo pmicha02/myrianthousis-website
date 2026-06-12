@@ -4,52 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Myrianthousis Architects</title>
-    <link rel="stylesheet" href="./css/button-styles.css">
-    <link rel="stylesheet" href="./css/image-styles.css">
-    <link rel="stylesheet" href="./css/styles.css">
-    <link rel="stylesheet" href="./css/tab_styles.css">
+    <link rel="stylesheet" href="./css/general.css">
+    <link rel="stylesheet" href="./css/home-screen.css">
     <script src="./js/tabs.js" defer></script> <!--reference the js code-->
     <script src="./js/projectTabs.js" defer></script>
 </head>
 <body>
 
-    <!-- <h1>Myrianthousis Architects</h1> -->
-
-    <!--tab panel-->
-    <div class="tabs" role="tablist" aria-label="Profile tabs">
+    <!--TAB PANEL-->
+    <div id="header-tab" role="tablist" aria-label="Profile tabs">
         <img src="./images/logo/L_BLACK.png" alt="company logo" width="300px">
-        <div class="tab-button-div">
+        <div class="tab-buttons">
             <button role="tab" id="home-button" aria-selected="true" aria-controls="panel-home" class="tab-button">home</button>
             <button role="tab" id="projects-button" aria-selected="false" aria-controls="panel-projects" class="tab-button">projects</button>
             <button role="tab" id="info-button" aria-selected="false" aria-controls="panel-info" class="tab-button">info</button>
         </div>
     </div>
 
-    <!--content for home tab-->
+    <!--HOME TAB-->
     <div role="tabpanel" id="panel-home" aria-labelledby="home-button">
         <!-- <p>This is text for HOME content.</p> -->
 
-        <div class="images-display">
-            <img src="./images/commercial/sample_building_002.jpg" alt="picture of a house project" width="800px" class="home-picture">
-            <img src="./images/residential/renders_maquette_001.jpg" alt="picture of a house project" width="800px" class="home-picture">
-            <img src="./images/interior/interior_001.jpg" alt="picture of a house project" width="800px" class="home-picture">
+        <div class="home-display-images">
+            <img src="./images/commercial/sample_building_002.jpg" alt="picture of a house project" width="800px">
         </div>
     </div>
 
-    <!--content for projects tab-->
+    <!--PROJECTS TAB-->
     <div role="tabpanel" id="panel-projects" aria-labelledby="projects-button">
-        <!-- <p>This is text for PROJECTS content.</p> -->
-        <div class="project-tabs" role="project-tablist" aria-label="Project tabs">
-            <button role="project-tab" id="project-all-button" aria-selected="true" aria-controls="panel-all-projects" class="project-button tab-button">ALL</button>
-            <button role="project-tab" id="project-residential-button" aria-selected="false" aria-controls="panel-residential-projects" class="project-button tab-button">RESIDENTIAL</button>
-            <button role="project-tab" id="project-commercial-button" aria-selected="false" aria-controls="panel-commercial-projects" class="project-button tab-button">COMMERCIAL</button>
-            <button role="project-tab" id="project-interior-button" aria-selected="false" aria-controls="panel-interior-projects" class="project-button tab-button">INTERIOR</button>
+        <div id="project-tab" role="project-tablist" aria-label="Project tabs">
+            <button role="project-tab" id="project-all-button" aria-selected="true" aria-controls="panel-all-projects" class="project-button tab-button">all</button>
+            <button role="project-tab" id="project-residential-button" aria-selected="false" aria-controls="panel-residential-projects" class="project-button tab-button">residential</button>
+            <button role="project-tab" id="project-commercial-button" aria-selected="false" aria-controls="panel-commercial-projects" class="project-button tab-button">commercial</button>
+            <button role="project-tab" id="project-interior-button" aria-selected="false" aria-controls="panel-interior-projects" class="project-button tab-button">interior</button>
         </div>
 
         <!--ALL TAB-->
         <div role="project-tabpanel" id="panel-all-projects" aria-labelledby="project-all-button">
-            <!-- <p>all projects go here...</p> -->
-
             <div>
                 <img src="./images/commercial/sample_building_002.jpg" alt="picture of project" width="600px">
                 <img src="./images/residential/sample_building_001.jpg" alt="picture of project" width="600px">
@@ -64,8 +55,6 @@
 
         <!--RESIDENTIAL TAB-->
          <div role="project-tabpanel" id="panel-residential-projects" aria-labelledby="project-residential-button">
-            <!-- <p>residential projects go here...</p> -->
-
             <div>
                 <img src="./images/residential/renders_maquette_001.jpg" alt="picture of project" width="600px">
                 <img src="./images/residential/renders_maquette_002.jpg" alt="picture of project" width="600px">
@@ -93,13 +82,10 @@
                 <img src="./images/interior/interior_003.jpg" alt="picture of project" width="600px">
             </div>
         </div>
-
     </div>
 
-    <!--content for info tab-->
+    <!--INFO TAB-->
     <div role="tabpanel" id="panel-info" aria-labelledby="info-button">
-        <!-- <p>This is text for INFO content.</p> -->
-
         <h2>About</h2>
             <div class="about-text-div">
                 <p>Myrianthousis Architects Ltd is a Cyprus-based architectural practice established in 1998, with extensive experience delivering projects both in Cyprus and internationally. Founded by lead architect Marios Myrianthousis, the firm provides comprehensive architectural services, from concept design and planning to site supervision and project management.</p>
@@ -110,14 +96,16 @@
 
         <h2>Employment</h2>
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto aperiam, cumque tempora recusandae consequuntur accusantium, culpa id nam itaque officiis eius excepturi necessitatibus? Nisi autem eveniet nihil suscipit quas magni!</p>
-
     </div>
 
+    <!-- FOOTER -->
     <div class="footer">
-        <h2 id="footer-header">Contact Information</h2>
-        <ul>
-            <li>email:example@myrianthousis.com</li>
-            <li>phone:+35799000000</li>
+        <h2 id="footer-header">Get In Touch</h2>
+        <ul id="footer-links">
+            <li>instagram profile</li>
+            <li>facebook_profile</li>
+            <li>example@myrianthousis.com</li>
+            <li>+35799000000</li>
         </ul>
     </div>
 

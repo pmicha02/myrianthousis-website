@@ -1,0 +1,64 @@
+/* TABS */
+#header-tab{
+    box-sizing: border-box;
+    height: 150px;
+    padding: 0 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#project-tab{
+    box-sizing: border-box;
+    height: 50px;
+    margin: 10px 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+.tab-buttons{
+    display: flex;
+    gap: 15px;
+}
+
+/* FOOTER */
+.footer{
+    color: black;
+    background-color: lightgrey;
+
+    box-sizing: border-box;
+    height: 200px;
+    margin-top: auto;
+    padding: 25px;
+    margin-top: auto;
+
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+}
+#footer-links{
+    margin: auto 0;
+    padding: 0;
+    list-style: none;
+
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+/* IMAGES AND MARGIN */
+.home-display-images > *{
+    width: 100%;
+    height: auto;
+}
+.home-display-images > *, 
+#panel-info{
+    margin-top: 50px;
+}
+
+#panel-info{
+    padding: 0 40px;
+}
