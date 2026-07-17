@@ -39,6 +39,11 @@
     white-space: nowrap;
 }
 
+#header-tab .tab-button{
+    color: black;
+    -webkit-text-fill-color: black;
+}
+
 /* PROJECT GALLERY */
 #panel-projects{
     flex: 1;
