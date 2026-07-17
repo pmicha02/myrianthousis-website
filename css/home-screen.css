@@ -3,6 +3,7 @@
     box-sizing: border-box;
     min-height: clamp(90px, 12vw, 150px);
     padding: 0 clamp(12px, 3vw, 20px);
+    padding-right: max(0px, calc(clamp(12px, 3vw, 20px) - (100vw - 100%)));
 
     display: flex;
     justify-content: space-between;
@@ -23,6 +24,7 @@
     min-height: 50px;
     margin: 10px 0;
     padding: 0 clamp(8px, 2vw, 20px);
+    padding-left: calc(clamp(8px, 2vw, 20px) + (100vw - 100%));
 
     display: flex;
     flex-shrink: 0;
@@ -42,6 +44,13 @@
 #header-tab .tab-button{
     color: black;
     -webkit-text-fill-color: black;
+}
+
+@media (hover: hover){
+    #header-tab .tab-button:hover{
+        color: #777;
+        -webkit-text-fill-color: #777;
+    }
 }
 
 /* PROJECT GALLERY */
