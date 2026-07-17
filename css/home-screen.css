@@ -114,14 +114,47 @@
 }
 
 .home-display-images{
-    margin-top: 50px;
+    margin: 50px 0 30px;
     width: 100%;
+    height: min(56.25vw, calc(100% - 80px));
+    aspect-ratio: 16 / 9;
+    position: relative;
+    overflow: hidden;
 }
 
 .home-hero-image{
     display: block;
+    position: absolute;
+    inset: 0;
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transform: scale(1.08) translateX(3%);
+    transition: opacity 1s ease-in-out;
+}
+
+.home-hero-image.is-active{
+    z-index: 1;
+    opacity: 1;
+    animation: pan-right-to-left 6s linear forwards;
+}
+
+.home-hero-image.is-exiting{
+    z-index: 0;
+    opacity: 0;
+    transform: scale(1.08) translateX(-3%);
+}
+
+@keyframes pan-right-to-left{
+    from { transform: scale(1.08) translateX(3%); }
+    to { transform: scale(1.08) translateX(-3%); }
+}
+
+@media (prefers-reduced-motion: reduce){
+    .home-hero-image{
+        animation: none;
+    }
 }
 
 #panel-info{
@@ -144,6 +177,19 @@
 }
 
 @media (max-width: 600px){
+    .home-display-images{
+        height: min(65dvh, calc(100% - 40px));
+        margin: 20px 0;
+        aspect-ratio: auto;
+    }
+
+    #footer-links{
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        justify-items: center;
+        row-gap: 10px;
+    }
+
     [role="project-tabpanel"] > div{
         grid-template-columns: minmax(0, 1fr);
     }
