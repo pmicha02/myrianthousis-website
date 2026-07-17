@@ -6,6 +6,9 @@ const panels = document.querySelectorAll('[role="tabpanel"]');
 
 // Switch the visible panel and update ARIA state for keyboard/screen reader users.
 function switchTab(selectedTab) {
+    // Only the home screen is locked to one viewport. Content-heavy tabs scroll normally.
+    document.body.classList.toggle('home-active', selectedTab.id === 'home-button');
+
     tabs.forEach(tab => {
         const panel = document.getElementById(tab.getAttribute('aria-controls'));
         const isSelected = tab === selectedTab;

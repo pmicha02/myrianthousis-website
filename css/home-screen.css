@@ -1,27 +1,76 @@
 /* TABS */
 #header-tab{
     box-sizing: border-box;
-    height: 150px;
-    padding: 0 20px;
+    min-height: clamp(90px, 12vw, 150px);
+    padding: 0 clamp(12px, 3vw, 20px);
 
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: clamp(50px, 4vw, 60px);
+    flex-shrink: 0;
+}
+
+.header-logo{
+    width: clamp(150px, 40vw, 300px);
+    min-width: 150px;
+    flex-shrink: 0;
+    height: auto;
 }
 
 #project-tab{
     box-sizing: border-box;
-    height: 50px;
+    min-height: 50px;
     margin: 10px 0;
+    padding: 0 clamp(8px, 2vw, 20px);
 
     display: flex;
+    flex-shrink: 0;
+    flex-wrap: nowrap;
     align-items: center;
     justify-content: center;
-    gap: 15px;
+    gap: clamp(6px, 3vw, 50px);
+    white-space: nowrap;
 }
 .tab-buttons{
     display: flex;
-    gap: 15px;
+    flex-shrink: 0;
+    gap: clamp(8px, 2vw, 15px);
+    white-space: nowrap;
+}
+
+/* PROJECT GALLERY */
+#panel-projects{
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+}
+
+#panel-projects[hidden]{
+    display: none;
+}
+
+[role="project-tabpanel"]{
+    overflow: visible;
+}
+
+[role="project-tabpanel"] > div{
+    box-sizing: border-box;
+    padding: 0 clamp(8px, 2vw, 24px) clamp(12px, 3vw, 32px);
+
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: clamp(8px, 2vw, 24px);
+}
+
+[role="project-tabpanel"] img{
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
 }
 
 /* FOOTER */
@@ -30,35 +79,72 @@
     background-color: lightgrey;
 
     box-sizing: border-box;
-    height: 200px;
-    margin-top: auto;
+    min-height: clamp(130px, 14vw, 200px);
     padding: 25px;
-    margin-top: auto;
 
     display: flex;
     flex-direction: column;
+    flex-shrink: 0;
     /* justify-content: space-between; */
 }
 #footer-links{
     margin: auto 0;
     padding: 0;
     list-style: none;
+    width: 100%;
 
     display: flex;
     justify-content: center;
-    gap: 30px;
+    flex-wrap: nowrap;
+    gap: clamp(6px, 2vw, 30px);
+
+    font-size: clamp(8px, 1.4vw, 20px);
+    white-space: nowrap;
 }
 
-/* IMAGES AND MARGIN */
-.home-display-images > *{
+#footer-links > li{
+    min-width: 0;
+}
+
+/* HOME HERO */
+#panel-home{
+    flex: 1;
+    min-height: 0;
+    overflow: hidden;
+}
+
+.home-display-images{
+    margin-top: 50px;
+    width: 100%;
+}
+
+.home-hero-image{
+    display: block;
     width: 100%;
     height: auto;
 }
-.home-display-images > *, 
-#panel-info{
-    margin-top: 50px;
-}
 
 #panel-info{
+    box-sizing: border-box;
+    flex: 1;
+    margin-top: 50px;
     padding: 0 40px;
+}
+
+@media (max-width: 700px){
+    .footer{
+        padding: 20px 12px;
+    }
+}
+
+@media (max-width: 900px){
+    [role="project-tabpanel"] > div{
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px){
+    [role="project-tabpanel"] > div{
+        grid-template-columns: minmax(0, 1fr);
+    }
 }
