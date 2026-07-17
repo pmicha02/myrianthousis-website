@@ -6,6 +6,9 @@ const project_panels = document.querySelectorAll('[role="project-tabpanel"]');
 
 // Switch the visible panel and update ARIA state for keyboard/screen reader users.
 function switchProjectTab(selectedTab) {
+    // Selecting a project category must return from the project detail view.
+    window.resetProjectDetail?.();
+
     project_tabs.forEach(tab => {
         const panel = document.getElementById(tab.getAttribute('aria-controls'));
         const isSelected = tab === selectedTab;

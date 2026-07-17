@@ -60,13 +60,22 @@ function openProjectDetail(image) {
     projectDetailBack.focus();
 }
 
-function closeProjectDetail() {
+function resetProjectDetail() {
+    if (projectDetail.hidden) return;
+
     projectDetail.hidden = true;
     projectTabNavigation.hidden = false;
 
     const selectedProjectTab = document.querySelector('[role="project-tab"][aria-selected="true"]');
     const selectedPanel = document.getElementById(selectedProjectTab.getAttribute('aria-controls'));
     selectedPanel.hidden = false;
+}
+
+// Allow both tab controllers to close the detail view as part of switching tabs.
+window.resetProjectDetail = resetProjectDetail;
+
+function closeProjectDetail() {
+    resetProjectDetail();
 
     window.scrollTo({ top: projectGalleryScrollPosition });
     activeProjectImage.focus();

@@ -6,6 +6,9 @@ const panels = document.querySelectorAll('[role="tabpanel"]');
 
 // Switch the visible panel and update ARIA state for keyboard/screen reader users.
 function switchTab(selectedTab) {
+    // Leaving or reselecting a main tab must close any open project detail view.
+    window.resetProjectDetail?.();
+
     // Only the home screen is locked to one viewport. Content-heavy tabs scroll normally.
     document.body.classList.toggle('home-active', selectedTab.id === 'home-button');
 
