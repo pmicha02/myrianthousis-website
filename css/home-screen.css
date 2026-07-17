@@ -71,6 +71,68 @@
     height: auto;
     aspect-ratio: 16 / 9;
     object-fit: cover;
+    cursor: pointer;
+    transition: opacity 200ms ease;
+}
+
+[role="project-tabpanel"] img:hover,
+[role="project-tabpanel"] img:focus-visible{
+    opacity: 0.8;
+}
+
+[role="project-tabpanel"] img:focus-visible{
+    outline: 2px solid currentColor;
+    outline-offset: 3px;
+}
+
+#project-detail{
+    width: 100%;
+}
+
+.project-detail-header{
+    box-sizing: border-box;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    min-height: 60px;
+    padding: 12px clamp(12px, 3vw, 40px);
+    margin-bottom: clamp(20px, 3vw, 40px);
+    background-color: lightgrey;
+
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+}
+
+#project-detail-back{
+    justify-self: start;
+    color: black;
+}
+
+.project-detail-title{
+    grid-column: 2;
+    text-align: center;
+    color: black;
+    font-size: clamp(14px, 1.25vw + 10px, 20px);
+    font-weight: 200;
+    text-transform: uppercase;
+}
+
+#project-detail-image{
+    display: block;
+    width: min(90%, 1200px);
+    margin: 0 auto;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+
+.project-detail-copy{
+    box-sizing: border-box;
+    width: min(100%, 900px);
+    margin: 0 auto;
+    padding: clamp(24px, 5vw, 70px) clamp(20px, 4vw, 50px);
+    line-height: 1.5;
 }
 
 /* FOOTER */

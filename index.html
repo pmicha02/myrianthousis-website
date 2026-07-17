@@ -9,6 +9,7 @@
     <script src="./js/tabs.js" defer></script> <!--reference the js code-->
     <script src="./js/projectTabs.js" defer></script>
     <script src="./js/homeCarousel.js" defer></script>
+    <script src="./js/projectDetails.js" defer></script>
 </head>
 <body>
 
@@ -77,7 +78,7 @@
         </div>
 
         <!--INTERIOR TAB-->
-         <div role="project-tabpanel" id="panel-interior-projects" aria-labelledby="project-interior-button">
+        <div role="project-tabpanel" id="panel-interior-projects" aria-labelledby="project-interior-button">
             <!-- <p>interior projects go here...</p> -->
 
             <div>
@@ -86,6 +87,15 @@
                 <img src="./images/interior/interior_003.jpg" alt="picture of project" width="600px">
             </div>
         </div>
+
+        <article id="project-detail" aria-labelledby="project-detail-title" hidden>
+            <div class="project-detail-header">
+                <button type="button" id="project-detail-back" class="project-button tab-button">back</button>
+                <h2 id="project-detail-title" class="project-detail-title"></h2>
+            </div>
+            <img id="project-detail-image" src="" alt="">
+            <div id="project-detail-copy" class="project-detail-copy"></div>
+        </article>
     </div>
 
     <!--INFO TAB-->
