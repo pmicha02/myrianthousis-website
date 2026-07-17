@@ -62,7 +62,7 @@
 
 [role="project-tabpanel"] > div{
     box-sizing: border-box;
-    padding: 0 clamp(8px, 2vw, 24px) clamp(12px, 3vw, 32px);
+    padding: 0 clamp(8px, 2vw, 24px) 100px;
 
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -154,6 +154,11 @@
     flex-shrink: 0;
     /* justify-content: space-between; */
 }
+
+#footer-header{
+    text-align: center;
+}
+
 #footer-links{
     margin: auto 0;
     padding: 0;
@@ -165,7 +170,7 @@
     flex-wrap: nowrap;
     gap: clamp(6px, 2vw, 30px);
 
-    font-size: clamp(8px, 1.4vw, 20px);
+    font-size: clamp(14px, 1vw + 10px, 18px);
     white-space: nowrap;
 }
 
@@ -181,10 +186,9 @@
 }
 
 .home-display-images{
-    margin: 50px 0 30px;
+    margin: 0 0 100px;
     width: 100%;
-    height: min(56.25vw, calc(100% - 80px));
-    aspect-ratio: 16 / 9;
+    height: calc(100% - 100px);
     position: relative;
     overflow: hidden;
 }
@@ -227,7 +231,7 @@
 #panel-info{
     box-sizing: border-box;
     flex: 1;
-    margin-top: 50px;
+    margin: 50px 0;
     padding: 0 40px;
 }
 
@@ -244,12 +248,6 @@
 }
 
 @media (max-width: 600px){
-    .home-display-images{
-        height: min(65dvh, calc(100% - 40px));
-        margin: 20px 0;
-        aspect-ratio: auto;
-    }
-
     #footer-links{
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));

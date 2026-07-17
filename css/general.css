@@ -3,6 +3,7 @@ body{
     font-weight: 200;
     font-size: clamp(16px, 1vw + 12px, 20px);
     margin: 0px;
+    min-width: 360px;
     min-height: 100vh;
     min-height: 100dvh;
 
